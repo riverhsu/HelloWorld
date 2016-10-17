@@ -27,7 +27,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func valueChanged(_ sender: AnyObject) {
-        showText.text = "Hello iOS World" 
+        showText.text = "Hello iOS World"
+        let alertController = UIAlertController(title: "Welcome to my first App", message: "Hello World", preferredStyle: UIAlertControllerStyle.alert)
+        
+        
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        
+        
+        self.present(alertController, animated: true, completion:nil)
     }
 
 }
